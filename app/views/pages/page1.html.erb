@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>page1 양식 </title>
+        <meta charset="utf-8"> 
+        <link href="../css/style.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Nanum+Gothic&family=Sunflower:wght@300;500&display=swap" rel="stylesheet">
+    </head>
+
+
+    <body>
+        <h1>양식 맛집</h1>
+        <div class="item">
+            <h2 class= "title">오늘 그대와</h2>
+            <img class = "photo" src = "/pasta.jpg" height= 300>
+            <p class="explain">오늘그대와는 샤로수길 중간쯤에 위치한 양식 식당이다. 파스타, 리조또, 샐러드를 판다. </p>
+        </div>
+        
+
+        <div class="index">
+            <%= link_to 'main', "/main/main"%><span class="right-margin"></span>
+            <%= link_to '1', "/pages/page1"%><span class="right-margin"></span>
+            <%= link_to '2', "/pages/page2"%><span class="right-margin"></span>
+            <%= link_to '3', "/pages/page3"%><span class="right-margin"></span>
+            <%= link_to '4', "/pages/page4"%><span class="right-margin"></span>
+            <%= link_to 'reviews', "/post/index"%><span class="right-margin"></span>
+        </div>
+        
+        <fieldset>
+            <legend>Write Reviews</legend>
+            <form action="/post/create" method= "post">
+                <label>Restaurant</label>
+                <input type="text" name="restaurant"/><br>
+                
+                <label>Content</label>
+                <textarea name="contents"></textarea>
+                <br>
+                <input type="submit" value="submit"/>
+                
+                
+            </form>
+            
+            
+        </fieldset>
+        
+        
+    </body>
+
+</html>
